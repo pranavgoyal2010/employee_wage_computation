@@ -2,9 +2,9 @@ public class Main {
     public static void main(String[] args){
 
         /**
-         * This is UC 4 where UC 3 is implemented using switch case statements.
+         * This is UC 5 where total monthly wage is calculated.
          *
-         * It includes UC 1, UC 2 and UC 3
+         * It includes UC 1, UC 2, UC 3 and UC 4
          * */
 
 
@@ -13,6 +13,7 @@ public class Main {
         System.out.println("Employee Status: "+status);
 
         int hourlyWage = 20;
+        int days = 20;
 
         switch (status) {
             case 0:
@@ -22,12 +23,12 @@ public class Main {
             case 1:
                 System.out.println("Employee is Present");
                 int hours = 4;
-                System.out.println("Part time total daily wage is: " + hourlyWage*hours);
+                System.out.println("Part time total monthly wage is: " + hourlyWage * hours * days);
                 break;
             case 2:
                 System.out.println("Employee is Present");
                 hours = 8;
-                System.out.println("Full time total daily wage is: " + hourlyWage*hours);
+                System.out.println("Full time total monthly wage is: " + hourlyWage * hours * days);
                 break;
         }
 
