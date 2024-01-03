@@ -2,11 +2,9 @@ public class Main {
     public static void main(String[] args){
 
         /**
-         * This is UC 3 where we compute the total daily wage of the employee based on if
-         * the employee is present or absent and if present is the employee full time
-         * or part time employee.
+         * This is UC 4 where UC 3 is implemented using switch case statements.
          *
-         * UC 3 includes UC 1 and UC 2
+         * It includes UC 1, UC 2 and UC 3
          * */
 
 
@@ -15,25 +13,24 @@ public class Main {
         System.out.println("Employee Status: "+status);
 
         int hourlyWage = 20;
-        if(status==0)
-        {
-            System.out.println("Employee is Absent");
-            System.out.println("Total daily wage is: 0");
-        }
-        else
-        {
-            System.out.println("Employee is Present");
-            if(status==1)
-            {
+
+        switch (status) {
+            case 0:
+                System.out.println("Employee is Absent");
+                System.out.println("Total daily wage is: 0");
+                break;
+            case 1:
+                System.out.println("Employee is Present");
                 int hours = 4;
                 System.out.println("Part time total daily wage is: " + hourlyWage*hours);
-            }
-            else
-            {
-                int hours = 8;
+                break;
+            case 2:
+                System.out.println("Employee is Present");
+                hours = 8;
                 System.out.println("Full time total daily wage is: " + hourlyWage*hours);
-            }
+                break;
         }
+
     }
 }
 
