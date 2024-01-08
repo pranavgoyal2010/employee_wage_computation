@@ -9,15 +9,19 @@ public class EmployeeWage {
     private int totalDays;
     private int totalHours;
     private int hourlyWage;
+    private int maxDays;
+    private int maxHours;
 
-    public EmployeeWage(int hourlyWage){
+    public EmployeeWage(int hourlyWage, int maxDays, int maxHours){
         this.totalDays = 0;
         this.totalHours = 0;
         this.hourlyWage = hourlyWage;
+        this.maxDays = maxDays;
+        this.maxHours = maxHours;
     }
 
     public void computeDisplayWage(){
-        while(this.totalHours<100 && this.totalDays<20)
+        while(this.totalHours<maxHours && this.totalDays<maxDays)
         {
             int status = (int) ((Math.random()*10)%3);
 
@@ -39,15 +43,15 @@ public class EmployeeWage {
 
         System.out.println("Total Days: " + this.totalDays);
 
-        if(this.totalHours<100)
+        if(this.totalHours<this.maxHours)
         {
             System.out.println("Total Hours: " + this.totalHours);
             System.out.println("Employee's wages for this month: " + this.hourlyWage * this.totalHours);
         }
         else
         {
-            System.out.println("Total Hours: 100");
-            System.out.println("Employee's wages for this month: " + this.hourlyWage * 100);
+            System.out.println("Total Hours: " + this.maxHours);
+            System.out.println("Employee's wages for this month: " + this.hourlyWage * this.maxHours);
         }
 
     }
